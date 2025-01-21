@@ -1,4 +1,7 @@
-
+<?php
+header("Location: formlogin.php");
+exit();
+?>
 
 <!DOCTYPE html>
 <html lang="en">
