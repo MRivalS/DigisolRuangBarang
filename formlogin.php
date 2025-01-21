@@ -29,105 +29,110 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ruang Barang</title>
+    <link rel="icon" href="./assets/img/LogoRB.png" />
     <link rel="stylesheet" href="./assets/img/LogoRB.png">
     <style>
         /* Reset dasar */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #f5f5f5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    color: #333;
-}
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
 
-.login-container {
-    text-align: center;
-    width: 100%;
-}
+        .login-container {
+            text-align: center;
+            width: 100%;
+        }
 
-.login-card {
-    background: white;
-    border-radius: 10px;
-    padding: 30px;
-    width: 350px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin: auto;
-}
+        .login-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            width: 350px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin: auto;
+        }
 
-.logo img {
-    width: 70px; /* Sesuaikan dengan ukuran gambar logo Anda */
-    margin-bottom: 20px;
-}
+        .logo img {
+            width: 70px;
+            /* Sesuaikan dengan ukuran gambar logo Anda */
+            margin-bottom: 20px;
+        }
 
-h2 {
-    margin: 0;
-    font-size: 20px;
-    font-weight: bold;
-}
+        h2 {
+            margin: 0;
+            font-size: 20px;
+            font-weight: bold;
+        }
 
-p {
-    color: #666;
-    font-size: 14px;
-    margin: 5px 0 20px 0;
-}
+        p {
+            color: #666;
+            font-size: 14px;
+            margin: 5px 0 20px 0;
+        }
 
-.form-group {
-    margin-bottom: 20px;
-    text-align: left;
-}
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
 
-label {
-    font-size: 14px;
-    margin-bottom: 5px;
-    display: block;
-}
+        label {
+            font-size: 14px;
+            margin-bottom: 5px;
+            display: block;
+        }
 
-input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 14px;
-    box-sizing: border-box;
-}
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
 
-input:focus {
-    border-color: #007bff;
-    outline: none;
-}
+        input:focus {
+            border-color: #007bff;
+            outline: none;
+        }
 
-.btn-login {
-    background-color: #88c0d0; /* Warna biru muda sesuai desain */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    width: 100%;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
+        .btn-login {
+            background-color: #88c0d0;
+            /* Warna biru muda sesuai desain */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            width: 100%;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
 
-.btn-login:hover {
-    background-color: #5a98a8; /* Warna biru lebih gelap untuk hover */
-}
+        .btn-login:hover {
+            background-color: #5a98a8;
+            /* Warna biru lebih gelap untuk hover */
+        }
 
-footer {
-    margin-top: 20px;
-    font-size: 12px;
-    color: #999;
-}
-
+        footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #999;
+        }
     </style>
 </head>
+
 <body>
     <div class="login-container">
         <div class="login-card">
@@ -148,7 +153,7 @@ footer {
                 </div>
                 <button type="submit" name="login" class="btn-login">Login</button>
             </form>
-            
+
         </div>
         <footer>
             <p>Copyright © By DIGISOL 2024</p>
@@ -159,14 +164,15 @@ footer {
         history.pushState(null, null, window.location.href);
 
         // Tangkap event "popstate"
-        window.addEventListener('popstate', function (event) {
+        window.addEventListener('popstate', function(event) {
             // Mengatur ulang state untuk mencegah kembali
             history.pushState(null, null, window.location.href);
 
             // Memuat ulang halaman (refresh)
             location.reload();
-            
+
         });
     </script>
 </body>
+
 </html>
