@@ -39,7 +39,7 @@ $nama = $_SESSION['nama'];
 <body class="sb-nav-fixed">
   <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
     <!-- Navbar Brand-->
-    <a class="navbar-brand ps-3" href="index.php">
+    <a class="navbar-brand ps-3" href="user.php">
       <img
         src="assets/img/HomeRB.png"
         alt="Logo"
