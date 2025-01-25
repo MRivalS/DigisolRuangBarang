@@ -4,16 +4,24 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta name="description" content="" />
   <meta name="author" content="" />
   <title>Ruang Barang</title>
-  <link rel="icon" href="./assets/img/LogoRB.png">
+  <link rel="icon" href="./assets/img/LogoRB.png" />
+  <link
+    href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css"
+    rel="stylesheet" />
+
   <link href="css/styles.css" rel="stylesheet" />
-  <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+  <script
+    src="https://use.fontawesome.com/releases/v6.3.0/js/all.js"
+    crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body class="sb-nav-fixed">
   <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
     <!-- Navbar Brand-->
     <a class="navbar-brand ps-3" href="index.php">
@@ -23,27 +31,43 @@
         style="width: 120px; height: 40px" />
     </a>
     <!-- Sidebar Toggle-->
-    <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+    <button
+      class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0"
+      id="sidebarToggle"
+      href="#!">
+      <i class="fas fa-bars"></i>
+    </button>
     <!-- Navbar Search-->
-    <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+    <form
+      class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+      <div class="input-group">
 
-      <body>
-        <h1 style="color: white; font-size: 16px; font-family: 'Poppins', sans-serif; margin: 0;">
-          Hello,
-        </h1>
-      </body>
+        <body>
+          <h1 style="color: white; font-size: 24px; font-family: 'Poppins', sans-serif; margin: 0;">
+            Hello, <?php echo $nama?>, (<?php echo $role ?>)
+          </h1>
+        </body>
+      </div>
     </form>
     <!-- Navbar-->
     <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
-        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-          <li><a class="dropdown-item" href="#!">profile</a></li>
+        <a
+          class="nav-link dropdown-toggle"
+          id="navbarDropdown"
+          href="#"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+        <ul
+          class="dropdown-menu dropdown-menu-end"
+          aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="profile.php">Profile</a></li>
           <li><a class="dropdown-item" href="#!">Activity Log</a></li>
           <li>
             <hr class="dropdown-divider" />
           </li>
-          <li><a class="dropdown-item" href="#!">Logout</a></li>
+          <li><a class="dropdown-item" href="formlogin.php">Logout</a></li>
         </ul>
       </li>
     </ul>
@@ -53,14 +77,24 @@
       <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
         <div class="sb-sidenav-menu">
           <div class="nav">
-            <div class="sb-sidenav-menu-heading">HOME</div>
-            <a class="nav-link" href="index.php">
-              <div class="sb-nav-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
-                  <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z" />
-                </svg></div>
+            <div class="sb-sidenav-menu-heading">Home</div>
+            <a class="nav-link" href="user.php">
+              <div class="sb-nav-link-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-house-door"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z" />
+                </svg>
+              </div>
               Home
             </a>
             <div class="sb-sidenav-menu-heading">Layanan</div>
+
             <a
               class="nav-link collapsed"
               href="#"
@@ -89,6 +123,10 @@
                 <a class="nav-link" href="pinjamruangan.php">Pinjam Ruangan</a>
               </nav>
             </div>
+
+
+
+
             <a class="nav-link" href="konfirmasi.php">
               <div class="sb-nav-link-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-square" viewBox="0 0 16 16">
@@ -98,6 +136,7 @@
               </div>
               KONFIRMASI
             </a>
+
 
 
             <a
@@ -123,16 +162,16 @@
               id="collapseLayouts2"
               aria-labelledby="headingTwo">
               <nav class="sb-sidenav-menu-nested nav">
-                <a class="nav-link" href="penggembalianbarang.php">Barang</a>
-                <a class="nav-link" href="penggembalianruangan.php">Ruangan</a>
+                <a class="nav-link" href="pengembalianbarang.php">Barang </a>
+                <a class="nav-link" href="penggembalianruangan.php"> Ruangan </a>
               </nav>
             </div>
-
 
           </div>
         </div>
       </nav>
     </div>
+
     <div id="layoutSidenav_content">
       <main>
         <div class="container-fluid px-4">
