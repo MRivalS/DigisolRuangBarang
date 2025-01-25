@@ -44,9 +44,6 @@ $nama = $_SESSION['nama'];
 
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -108,12 +105,12 @@ $nama = $_SESSION['nama'];
                 <ul
                     class="dropdown-menu dropdown-menu-end"
                     aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#!">Profile</a></li>
+                    <li><a class="dropdown-item" href="profile.php">Profile</a></li>
                     <li><a class="dropdown-item" href="#!">Activity Log</a></li>
                     <li>
                         <hr class="dropdown-divider" />
                     </li>
-                    <li><a class="dropdown-item" href="#!">Logout</a></li>
+                    <li><a class="dropdown-item" href="formlogin.php">Logout</a></li>
                 </ul>
             </li>
         </ul>
@@ -143,7 +140,7 @@ $nama = $_SESSION['nama'];
 
                         <a
                             class="nav-link collapsed"
-                            href="#"
+                            href=""
                             data-bs-toggle="collapse"
                             data-bs-target="#collapseLayouts1"
                             aria-expanded="false"
@@ -167,6 +164,7 @@ $nama = $_SESSION['nama'];
                             <nav class="sb-sidenav-menu-nested nav">
                                 <a class="nav-link" href="kelolabarang.php">Data Barang</a>
                                 <a class="nav-link" href="kelolaruangan.php">Data Ruangan</a>
+                                <a class="nav-link" href="tambahan_kelola_data_user.php">Data User</a>
                             </nav>
                         </div>
 
@@ -251,27 +249,27 @@ $nama = $_SESSION['nama'];
                                 </tbody>
                             </table>
                             <div class="card mb-4">
-                    <div class="card-header">
-                            <i class="fas fa-table me-1"></i>
-                            Riawayat barang yang di pinjam
-                        </div>
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th scope="col">No</th>
-                                    <th scope="col">Nama Barang</th>
-                                    <th scope="col">Tgl. Pinjam</th>
-                                    <th scope="col">Tgl. Kembali</th>
-                                    <th scope="col">Status peminjam</th>
-                                    <th scope="col">Status Admin</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php
-                                if ($lihat_data->num_rows > 0) {
-                                    $no = 1;
-                                    while ($row = $lihat_data->fetch_assoc()) {
-                                        echo "<tr>
+                                <div class="card-header">
+                                    <i class="fas fa-table me-1"></i>
+                                    Riawayat barang yang di pinjam
+                                </div>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">No</th>
+                                            <th scope="col">Nama Barang</th>
+                                            <th scope="col">Tgl. Pinjam</th>
+                                            <th scope="col">Tgl. Kembali</th>
+                                            <th scope="col">Status peminjam</th>
+                                            <th scope="col">Status Admin</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php
+                                        if ($lihat_data->num_rows > 0) {
+                                            $no = 1;
+                                            while ($row = $lihat_data->fetch_assoc()) {
+                                                echo "<tr>
                                                 <td>{$no}</td>
                                                 <td>{$row['barang']}</td>
                                                 <td>{$row['tanggal_mulai']}</td>
@@ -279,13 +277,13 @@ $nama = $_SESSION['nama'];
                                                 <td>{$row['status']}</td>
                                                 <td>{$row['admin_status']}</td>
                                             </tr>";
-                                        $no++;
-                                    }
-                                }
-                                ?>
-                            </tbody>
-                        </table>
-                        </div>
+                                                $no++;
+                                            }
+                                        }
+                                        ?>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
             </main>
@@ -313,7 +311,7 @@ $nama = $_SESSION['nama'];
         src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js"
         crossorigin="anonymous"></script>
     <script src="js/datatables-simple-demo.js"></script>
-    
+
 </body>
 
 </html>
