@@ -1,3 +1,19 @@
+<?php
+session_start();
+include("inc_koneksi.php");
+
+
+// Query untuk data yang sudah dikonfirmasi
+$confirmedResult = $koneksi->query("SELECT * FROM peminjaman_barang WHERE status IN ('pending')");
+
+
+
+$role = $_SESSION['role'];
+$nama = $_SESSION['nama'];
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
