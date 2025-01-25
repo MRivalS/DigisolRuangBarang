@@ -198,39 +198,31 @@ $nama = $_SESSION['nama'];
           <li class="breadcrumb-item"><a href="user.php">Home</a></li>
           <li class="breadcrumb-item active">Data Konfirmasi Ruangan</li>
         </ol>
-        <div id="layoutSidenav_content">
-          <main>
-            <div class="container-fluid px-4">
-              <h1 class="mt-4">KONFIRMASI PEMINJAMAN RUANGAN</h1>
-              <ol class="breadcrumb mb-4">
-                <li class="breadcrumb-item"><a href="user.php">Home</a></li>
-                <li class="breadcrumb-item active">Data Konfirmasi Ruangan</li>
-              </ol>
-              <div class="card mb-4">
-                <div class="card-header">
-                  <i class="fas fa-table me-1"></i>
-                  View Konfirmasi Peminjaman Ruangan
-                </div>
-                <!-- Tabel responsif -->
-                <div class="table-responsive">
-                  <table class="table table-dark table-striped">
-                    <thead>
-                      <tr>
-                        <th scope="col">No</th>
-                        <th scope="col">Nama Ruangan</th>
-                        <th scope="col">Tgl. Pinjam</th>
-                        <th scope="col">Tgl. Kembali</th>
-                        <th scope="col">Riwayat</th>
-                        <th scope="col">Status</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <!-- PHP untuk data tabel -->
-                      <?php
-                      $no = 1;
-                      if ($confirmedResult->num_rows > 0) {
-                        while ($row = $confirmedResult->fetch_assoc()) {
-                          echo "<tr>
+        <div class="card mb-4">
+          <div class="card-header">
+            <i class="fas fa-table me-1"></i>
+            View Konfirmasi Peminjaman Ruangan
+          </div>
+          <!-- Tabel responsif -->
+          <div class="table-responsive">
+            <table class="table table-dark table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">Nama Ruangan</th>
+                  <th scope="col">Tgl. Pinjam</th>
+                  <th scope="col">Tgl. Kembali</th>
+                  <th scope="col">Riwayat</th>
+                  <th scope="col">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- PHP untuk data tabel -->
+                <?php
+                $no = 1;
+                if ($confirmedResult->num_rows > 0) {
+                  while ($row = $confirmedResult->fetch_assoc()) {
+                    echo "<tr>
                                 <td>{$no}</td>
                                 <td>{$row['nama_ruangan']}</td>
                                 <td>{$row['tanggal_mulai']}</td>
@@ -238,30 +230,30 @@ $nama = $_SESSION['nama'];
                                 <td>{$row['riwayat']}</td>
                                 <td>{$row['status']}</td>
                             </tr>";
-                          $no++;
-                        }
-                      } else {
-                        echo "<tr><td colspan='6'>Belum ada data konfirmasi.</td></tr>";
-                      }
-                      ?>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </main>
-          <footer class="py-4 bg-light mt-auto">
-            <div class="container-fluid px-4">
-              <div class="d-flex align-items-center justify-content-between small">
-                <div class="text-muted">Copyright &copy; Your Website 2023</div>
-
-              </div>
-            </div>
-          </footer>
+                    $no++;
+                  }
+                } else {
+                  echo "<tr><td colspan='6'>Belum ada data konfirmasi.</td></tr>";
+                }
+                ?>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-      <script src="js/scripts.js"></script>
+    </main>
+    <footer class="py-4 bg-light mt-auto">
+      <div class="container-fluid px-4">
+        <div class="d-flex align-items-center justify-content-between small">
+          <div class="text-muted">Copyright &copy; Your Website 2023</div>
+
+        </div>
+      </div>
+    </footer>
+  </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="js/scripts.js"></script>
 </body>
 
 </html>
