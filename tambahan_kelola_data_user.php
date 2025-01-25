@@ -197,7 +197,7 @@ $resultUser = $koneksi->query($sqlUser)
                     </div>
                 </div>
             </nav>
-        </div>F
+        </div>
         <div id="layoutSidenav_content">
             <main>
                 <div class="container-fluid px-4">
