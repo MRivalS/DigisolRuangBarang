@@ -46,43 +46,27 @@ $nama = $_SESSION['nama'];
         style="width: 120px; height: 40px" />
     </a>
     <!-- Sidebar Toggle-->
-    <button
-      class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0"
-      id="sidebarToggle"
-      href="#!">
-      <i class="fas fa-bars"></i>
-    </button>
+    <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
     <!-- Navbar Search-->
-    <form
-      class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
-      <div class="input-group">
+    <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
 
-        <body>
-          <h1 style="color: white; font-size: 24px; font-family: 'Poppins', sans-serif; margin: 0;">
-            Hello, <?php echo $nama?>, (<?php echo $role ?>)
-          </h1>
-        </body>
-      </div>
+      <body>
+        <h1 style="color: white; font-size: 24px; font-family: 'Poppins', sans-serif; margin: 0;">
+          Hello, <?php echo $nama ?>, (<?php echo $role ?>)
+        </h1>
+      </body>
     </form>
     <!-- Navbar-->
     <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
       <li class="nav-item dropdown">
-        <a
-          class="nav-link dropdown-toggle"
-          id="navbarDropdown"
-          href="#"
-          role="button"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
-        <ul
-          class="dropdown-menu dropdown-menu-end"
-          aria-labelledby="navbarDropdown">
-          <li><a class="dropdown-item" href="profile.php">Profile</a></li>
+        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="#!">profile</a></li>
           <li><a class="dropdown-item" href="#!">Activity Log</a></li>
           <li>
             <hr class="dropdown-divider" />
           </li>
-          <li><a class="dropdown-item" href="formlogin.php">Logout</a></li>
+          <li><a class="dropdown-item" href="#!">Logout</a></li>
         </ul>
       </li>
     </ul>
@@ -92,27 +76,17 @@ $nama = $_SESSION['nama'];
       <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
         <div class="sb-sidenav-menu">
           <div class="nav">
-            <div class="sb-sidenav-menu-heading">Home</div>
+            <div class="sb-sidenav-menu-heading">HOME</div>
             <a class="nav-link" href="user.php">
-              <div class="sb-nav-link-icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-house-door"
-                  viewBox="0 0 16 16">
-                  <path
-                    d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z" />
-                </svg>
-              </div>
+              <div class="sb-nav-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+                  <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z" />
+                </svg></div>
               Home
             </a>
             <div class="sb-sidenav-menu-heading">Layanan</div>
-
             <a
               class="nav-link collapsed"
-              href="#"
+              href="user.php"
               data-bs-toggle="collapse"
               data-bs-target="#collapseLayouts1"
               aria-expanded="false"
@@ -138,10 +112,6 @@ $nama = $_SESSION['nama'];
                 <a class="nav-link" href="pinjamruangan.php">Pinjam Ruangan</a>
               </nav>
             </div>
-
-
-
-
             <a class="nav-link" href="konfirmasi.php">
               <div class="sb-nav-link-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-square" viewBox="0 0 16 16">
@@ -151,7 +121,6 @@ $nama = $_SESSION['nama'];
               </div>
               KONFIRMASI
             </a>
-
 
 
             <a
@@ -177,10 +146,11 @@ $nama = $_SESSION['nama'];
               id="collapseLayouts2"
               aria-labelledby="headingTwo">
               <nav class="sb-sidenav-menu-nested nav">
-                <a class="nav-link" href="pengembalianbarang.php">Barang </a>
-                <a class="nav-link" href="penggembalianruangan.php"> Ruangan </a>
+                <a class="nav-link" href="pengembalianbarang.php">Barang</a>
+                <a class="nav-link" href="pengembalianruangan.php">Ruangan</a>
               </nav>
             </div>
+
 
           </div>
         </div>
