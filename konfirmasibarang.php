@@ -184,7 +184,7 @@ $nama = $_SESSION['nama'];
                         <li class="breadcrumb-item active">Data Konfirmasi Barang</li>
                     </ol>
                     <div class="table-responsive">
-                        <table class="table table-striped">
+                        <table class="table table-dark table-striped">
                             <thead>
                                 <tr>
                                     <th scope="col">No</th>
@@ -201,26 +201,27 @@ $nama = $_SESSION['nama'];
                                     $no = 1;
                                     while ($row = $result->fetch_assoc()) {
                                         echo "<tr>
-                            <td>{$no}</td>
-                            <td>{$row['barang']}</td>
-                            <td>{$row['tanggal_mulai']}</td>
-                            <td>{$row['tanggal_selesai']}</td>
-                            <td>{$row['deskripsi']}</td>
-                            <td>
-                                <form method='POST'>
-                                    <input type='hidden' name='id_peminjaman' value='{$row['id']}'>
-                                    <button type='submit' name='konfirmasi' class='btn btn-primary btn-sm'>Konfirmasi</button>
-                                </form>
-                            </td>
-                        </tr>";
+                        <td>{$no}</td>
+                        <td>{$row['barang']}</td>
+                        <td>{$row['tanggal_mulai']}</td>
+                        <td>{$row['tanggal_selesai']}</td>
+                        <td>{$row['deskripsi']}</td>
+                        <td>
+                            <form method='POST'>
+                                <input type='hidden' name='id_peminjaman' value='{$row['id']}'>
+                                <button type='submit' name='konfirmasi' class='btn btn-primary'>Konfirmasi</button>
+                            </form>
+                        </td>
+                    </tr>";
                                         $no++;
                                     }
                                 } else {
-                                    echo "<tr><td colspan='6' class='text-center'>Belum ada peminjaman yang perlu dikonfirmasi</td></tr>";
+                                    echo "<tr><td colspan='6'>Belum ada peminjaman yang perlu dikonfirmasi</td></tr>";
                                 }
                                 ?>
                             </tbody>
                         </table>
+
                     </div>
 
             </main>
