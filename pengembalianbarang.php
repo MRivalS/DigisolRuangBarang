@@ -53,6 +53,12 @@ $user_id = $_SESSION['user_id'];
 $query = "SELECT * FROM peminjaman_barang WHERE user_id = '$user_id' AND status = 'terkonfirmasi'";
 $result = $koneksi->query($query);
 
+
+
+
+$role = $_SESSION['role'];
+$nama = $_SESSION['nama'];
+
 ?>
 
 
