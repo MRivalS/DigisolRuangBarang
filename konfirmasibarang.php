@@ -166,7 +166,7 @@ $nama = $_SESSION['nama'];
                             aria-labelledby="headingTwo">
                             <nav class="sb-sidenav-menu-nested nav">
                                 <a class="nav-link" href="pengembalianbarang.php">Barang</a>
-                                <a class="nav-link" href="kembalikan_ruangan.php">Ruangan</a>
+                                <a class="nav-link" href="pengembalianruangan.php">Ruangan</a>
                             </nav>
                         </div>
 

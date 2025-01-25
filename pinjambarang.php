@@ -184,8 +184,8 @@ $nama = $_SESSION['nama'];
               id="collapseLayouts2"
               aria-labelledby="headingTwo">
               <nav class="sb-sidenav-menu-nested nav">
-                <a class="nav-link" href="penggembalianbarang.php">Barang</a>
-                <a class="nav-link" href="penggembalianruangan.php">Ruangan</a>
+                <a class="nav-link" href="pengembalianbarang.php">Barang</a>
+                <a class="nav-link" href="pengembalianruangan.php">Ruangan</a>
               </nav>
             </div>
 
