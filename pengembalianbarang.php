@@ -87,7 +87,7 @@ $result = $koneksi->query($query);
 
       <body>
         <h1 style="color: white; font-size: 24px; font-family: 'Poppins', sans-serif; margin: 0;">
-          Hello,
+          Hello, <?php echo $nama?>, (<?php echo $role ?>)
         </h1>
       </body>
     </form>
