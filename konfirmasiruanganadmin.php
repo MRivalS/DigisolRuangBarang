@@ -15,9 +15,6 @@ $nama = $_SESSION['nama'];
 ?>
 
 
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -61,7 +58,7 @@ $nama = $_SESSION['nama'];
 
                 <body>
                     <h1 style="color: white; font-size: 24px; font-family: 'Poppins', sans-serif; margin: 0;">
-                        Hello, <?php echo $nama?>, (<?php echo $role ?>)
+                        Hello, <?php echo $nama ?>, (<?php echo $role ?>)
                     </h1>
                 </body>
             </div>
@@ -79,7 +76,7 @@ $nama = $_SESSION['nama'];
                 <ul
                     class="dropdown-menu dropdown-menu-end"
                     aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#!">Profile</a></li>
+                    <li><a class="dropdown-item" href="profile.php">Profile</a></li>
                     <li><a class="dropdown-item" href="#!">Activity Log</a></li>
                     <li>
                         <hr class="dropdown-divider" />
@@ -95,7 +92,7 @@ $nama = $_SESSION['nama'];
                 <div class="sb-sidenav-menu">
                     <div class="nav">
                         <div class="sb-sidenav-menu-heading">Home</div>
-                        <a class="nav-link" href="admin.php">
+                        <a class="nav-link" href="staf.php">
                             <div class="sb-nav-link-icon">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -114,7 +111,7 @@ $nama = $_SESSION['nama'];
 
                         <a
                             class="nav-link collapsed"
-                            href="#"
+                            href=""
                             data-bs-toggle="collapse"
                             data-bs-target="#collapseLayouts1"
                             aria-expanded="false"
@@ -138,6 +135,7 @@ $nama = $_SESSION['nama'];
                             <nav class="sb-sidenav-menu-nested nav">
                                 <a class="nav-link" href="kelolabarang.php">Data Barang</a>
                                 <a class="nav-link" href="kelolaruangan.php">Data Ruangan</a>
+                                <a class="nav-link" href="tambahan_kelola_data_user.php">Data User</a>
                             </nav>
                         </div>
 
