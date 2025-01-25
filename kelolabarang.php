@@ -49,9 +49,6 @@ $nama = $_SESSION['nama'];
 
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -95,7 +92,7 @@ $nama = $_SESSION['nama'];
 
                 <body>
                     <h1 style="color: white; font-size: 24px; font-family: 'Poppins', sans-serif; margin: 0;">
-                        Hello, <?php echo $nama?>, (<?php echo $role ?>)
+                        Hello, <?php echo $nama ?>, (<?php echo $role ?>)
                     </h1>
                 </body>
             </div>
@@ -148,7 +145,7 @@ $nama = $_SESSION['nama'];
 
                         <a
                             class="nav-link collapsed"
-                            href="#"
+                            href=""
                             data-bs-toggle="collapse"
                             data-bs-target="#collapseLayouts1"
                             aria-expanded="false"
@@ -172,6 +169,7 @@ $nama = $_SESSION['nama'];
                             <nav class="sb-sidenav-menu-nested nav">
                                 <a class="nav-link" href="kelolabarang.php">Data Barang</a>
                                 <a class="nav-link" href="kelolaruangan.php">Data Ruangan</a>
+                                <a class="nav-link" href="tambahan_kelola_data_user.php">Data User</a>
                             </nav>
                         </div>
 
@@ -201,95 +199,95 @@ $nama = $_SESSION['nama'];
             </nav>
         </div>
         <div id="layoutSidenav_content">
-                <div class="container-fluid px-4">
-                    <h1 class="mt-4">Manajemen Data Barang</h1>
-                    <ol class="breadcrumb mb-4">
-                        <li class="breadcrumb-item active">Solusi Terbaik Untuk Anda</li>
-                    </ol>
-                    <div class="container">
-                        <div class="form-container">
-                            <form method="POST" action="">
-                                <!-- Masukan Data Barang -->
-                                <input type="hidden" name="id" id="id">
-                                <div class="mb-3" style="margin-bottom: 20px;">
-                                    <label for="kode_barang" class="form-label">Nama Barang</label>
-                                    <input type="text" name="nama_barang" class="form-control" id="nama_barang" placeholder="Masukan Nama Barang" required>
-                                </div>
-                                <div class="mb-3" style="margin-bottom: 20px;">
-                                    <label for="nama_barang" class="form-label">Kode Barang</label>
-                                    <input type="text" name="kode_barang" class="form-control" id="kode_barang" placeholder="Masukan Kode Barang" required>
-                                </div>
-                                <!-- Submit submit -->
-                                <div style="margin-bottom: 30px;">
-                                    <button type="submit" class="btn btn-primary">Simpan</button>
-                                </div>
-                            </form>
-                        </div>
-                        <!-- Table Section -->
-                        <div class="card" style="margin-top: 30px;">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>No</th>
-                                        <th>Nama Barang</th>
-                                        <th>Kode Barang</th>
-                                        <th>Aksi</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php
-                                        if ($resultBarang->num_rows > 0) {
-                                            while ($row = $resultBarang->fetch_assoc()) {
-                                            echo "<td>" . $row['id'] . "</td>";
-                                            echo "<td>" . $row['kode_barang'] . "</td>";
-                                            echo "<td>" . $row['nama_barang'] . "</td>";
-                                            echo "<td>
+            <div class="container-fluid px-4">
+                <h1 class="mt-4">Manajemen Data Barang</h1>
+                <ol class="breadcrumb mb-4">
+                    <li class="breadcrumb-item active">Solusi Terbaik Untuk Anda</li>
+                </ol>
+                <div class="container">
+                    <div class="form-container">
+                        <form method="POST" action="">
+                            <!-- Masukan Data Barang -->
+                            <input type="hidden" name="id" id="id">
+                            <div class="mb-3" style="margin-bottom: 20px;">
+                                <label for="kode_barang" class="form-label">Nama Barang</label>
+                                <input type="text" name="nama_barang" class="form-control" id="nama_barang" placeholder="Masukan Nama Barang" required>
+                            </div>
+                            <div class="mb-3" style="margin-bottom: 20px;">
+                                <label for="nama_barang" class="form-label">Kode Barang</label>
+                                <input type="text" name="kode_barang" class="form-control" id="kode_barang" placeholder="Masukan Kode Barang" required>
+                            </div>
+                            <!-- Submit submit -->
+                            <div style="margin-bottom: 30px;">
+                                <button type="submit" class="btn btn-primary">Simpan</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Table Section -->
+                    <div class="card" style="margin-top: 30px;">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Nama Barang</th>
+                                    <th>Kode Barang</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                if ($resultBarang->num_rows > 0) {
+                                    while ($row = $resultBarang->fetch_assoc()) {
+                                        echo "<td>" . $row['id'] . "</td>";
+                                        echo "<td>" . $row['kode_barang'] . "</td>";
+                                        echo "<td>" . $row['nama_barang'] . "</td>";
+                                        echo "<td>
                                             <button class='btn btn-warning btn-sm' onclick='editBarang(" . json_encode($row) . ")'>Edit</button>
                                             <a href='kelolabarang.php?hapus=" . $row['id'] . "' class='btn btn-danger btn-sm' onclick='return confirm(\"Yakin ingin menghapus data ini?\")'>Hapus</a>
                                             </td>";
-                                            echo "</tr>";
-                                        }
-                                    } else {
-                                            echo "<tr><td colspan='4'>Belum ada data barang.</td></tr>";
-                                        }
-                                    ?>
-                                </tbody>
-                            </table>
-                        </div>
-                        <script>
-        // Script untuk mengisi form edit
-        function editBarang(barang) {
-            document.getElementById('id').value = barang.id;
-            document.getElementById('nama_barang').value = barang.nama_barang;
-            document.getElementById('kode_barang').value = barang.kode_barang;
-        }
-    </script>
-</div>
-            
-
-            <footer class="py-4 bg-light mt-auto">
-                <div class="container-fluid px-4">
-                    <div
-                        class="d-flex align-items-center justify-content-between small">
-                        <div class="text-muted">Copyright &copy; BY DIGISOL 2024</div>
+                                        echo "</tr>";
+                                    }
+                                } else {
+                                    echo "<tr><td colspan='4'>Belum ada data barang.</td></tr>";
+                                }
+                                ?>
+                            </tbody>
+                        </table>
                     </div>
+                    <script>
+                        // Script untuk mengisi form edit
+                        function editBarang(barang) {
+                            document.getElementById('id').value = barang.id;
+                            document.getElementById('nama_barang').value = barang.nama_barang;
+                            document.getElementById('kode_barang').value = barang.kode_barang;
+                        }
+                    </script>
                 </div>
-            </footer>
+
+
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div
+                            class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; BY DIGISOL 2024</div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
         </div>
-    </div>
-    <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-        crossorigin="anonymous"></script>
-    <script src="js/scripts.js"></script>
-    <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"
-        crossorigin="anonymous"></script>
-    <script src="assets/demo/chart-area-demo.js"></script>
-    <script src="assets/demo/chart-bar-demo.js"></script>
-    <script
-        src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js"
-        crossorigin="anonymous"></script>
-    <script src="js/datatables-simple-demo.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+            crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"
+            crossorigin="anonymous"></script>
+        <script src="assets/demo/chart-area-demo.js"></script>
+        <script src="assets/demo/chart-bar-demo.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js"
+            crossorigin="anonymous"></script>
+        <script src="js/datatables-simple-demo.js"></script>
 </body>
 
 </html>
