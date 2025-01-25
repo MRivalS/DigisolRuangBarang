@@ -76,7 +76,6 @@ $nama = $_SESSION['nama'];
   <link href="css/styles.css" rel="stylesheet" />
   <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
   <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
     <!-- Navbar Brand-->
@@ -93,7 +92,7 @@ $nama = $_SESSION['nama'];
 
       <body>
         <h1 style="color: white; font-size: 24px; font-family: 'Poppins', sans-serif; margin: 0;">
-          Hello, <?php echo $nama?>, (<?php echo $role ?>)
+          Hello, <?php echo $nama ?>, (<?php echo $role ?>)
         </h1>
       </body>
     </form>
@@ -191,8 +190,6 @@ $nama = $_SESSION['nama'];
                 <a class="nav-link" href="pengembalianruangan.php">Ruangan</a>
               </nav>
             </div>
-
-
           </div>
         </div>
       </nav>
