@@ -183,13 +183,8 @@ $nama = $_SESSION['nama'];
                         <li class="breadcrumb-item"><a href="user.php">Home</a></li>
                         <li class="breadcrumb-item active">Data Konfirmasi Barang</li>
                     </ol>
-                    <div class="card mb-4">
-                        <div class="card-header">
-                            <i class="fas fa-table me-1"></i>
-                            View Konfirmasi Peminjaman Barang
-                        </div>
-
-                        <table class="table">
+                    <div class="table-responsive">
+                        <table class="table table-striped">
                             <thead>
                                 <tr>
                                     <th scope="col">No</th>
@@ -197,7 +192,6 @@ $nama = $_SESSION['nama'];
                                     <th scope="col">Tgl. Pinjam</th>
                                     <th scope="col">Tgl. Kembali</th>
                                     <th scope="col">Alasan</th>
-                                    
                                     <th scope="col">Aksi</th>
                                 </tr>
                             </thead>
@@ -207,65 +201,27 @@ $nama = $_SESSION['nama'];
                                     $no = 1;
                                     while ($row = $result->fetch_assoc()) {
                                         echo "<tr>
-                                                <td>{$no}</td>
-                                                <td>{$row['barang']}</td>
-                                                <td>{$row['tanggal_mulai']}</td>
-                                                <td>{$row['tanggal_selesai']}</td>
-                                                <td>{$row['deskripsi']}</td>
-                                                
-                                                <td>
-                                                    <form method='POST'>
-                                                        <input type='hidden' name='id_peminjaman' value='{$row['id']}'>
-                                                        <button type='submit' name='konfirmasi' class='btn btn-primary'>Konfirmasi</button>
-                                                    </form>
-                                                </td>
-                                            </tr>";
+                            <td>{$no}</td>
+                            <td>{$row['barang']}</td>
+                            <td>{$row['tanggal_mulai']}</td>
+                            <td>{$row['tanggal_selesai']}</td>
+                            <td>{$row['deskripsi']}</td>
+                            <td>
+                                <form method='POST'>
+                                    <input type='hidden' name='id_peminjaman' value='{$row['id']}'>
+                                    <button type='submit' name='konfirmasi' class='btn btn-primary btn-sm'>Konfirmasi</button>
+                                </form>
+                            </td>
+                        </tr>";
                                         $no++;
                                     }
                                 } else {
-                                    echo "<tr><td colspan='7'>Belum ada peminjaman yang perlu dikonfirmasi</td></tr>";
+                                    echo "<tr><td colspan='6' class='text-center'>Belum ada peminjaman yang perlu dikonfirmasi</td></tr>";
                                 }
                                 ?>
                             </tbody>
                         </table>
-                    <div class="card mb-4">
-                    <div class="card-header">
-                            <i class="fas fa-table me-1"></i>
-                            Riawayat barang yg anda pinjam
-                        </div>
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th scope="col">No</th>
-                                    <th scope="col">Nama Barang</th>
-                                    <th scope="col">Tgl. Pinjam</th>
-                                    <th scope="col">Tgl. Kembali</th>
-                                    <th scope="col">Status peminjam</th>
-                                    <th scope="col">Status Admin</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php
-                                if ($lihat->num_rows > 0) {
-                                    $no = 1;
-                                    while ($row = $lihat->fetch_assoc()) {
-                                        echo "<tr>
-                                                <td>{$no}</td>
-                                                <td>{$row['barang']}</td>
-                                                <td>{$row['tanggal_mulai']}</td>
-                                                <td>{$row['tanggal_selesai']}</td>
-                                                <td>{$row['status']}</td>
-                                                <td>{$row['admin_status']}</td>
-                                            </tr>";
-                                        $no++;
-                                    }
-                                }
-                                ?>
-                            </tbody>
-                        </table>
-                        </div>
                     </div>
-
 
             </main>
             <footer class="py-4 bg-light mt-auto">
