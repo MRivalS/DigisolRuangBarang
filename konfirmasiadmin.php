@@ -13,8 +13,6 @@ $role = $_SESSION['role'];
 $nama = $_SESSION['nama'];
 
 ?>
-<!DOCTYPE html>
-<html lang="en">
 
 <head>
     <meta charset="utf-8" />
@@ -59,7 +57,7 @@ $nama = $_SESSION['nama'];
 
                 <body>
                     <h1 style="color: white; font-size: 24px; font-family: 'Poppins', sans-serif; margin: 0;">
-                        Hello, <?php echo $nama?>, (<?php echo $role ?>)
+                        Hello, <?php echo $nama ?>, (<?php echo $role ?>)
                     </h1>
                 </body>
             </div>
@@ -112,7 +110,7 @@ $nama = $_SESSION['nama'];
 
                         <a
                             class="nav-link collapsed"
-                            href="#"
+                            href=""
                             data-bs-toggle="collapse"
                             data-bs-target="#collapseLayouts1"
                             aria-expanded="false"
@@ -136,6 +134,7 @@ $nama = $_SESSION['nama'];
                             <nav class="sb-sidenav-menu-nested nav">
                                 <a class="nav-link" href="kelolabarang.php">Data Barang</a>
                                 <a class="nav-link" href="kelolaruangan.php">Data Ruangan</a>
+                                <a class="nav-link" href="tambahan_kelola_data_user.php">Data User</a>
                             </nav>
                         </div>
 
