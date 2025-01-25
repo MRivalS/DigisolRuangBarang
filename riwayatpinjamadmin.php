@@ -22,9 +22,6 @@ $nama = $_SESSION['nama'];
 
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -86,7 +83,7 @@ $nama = $_SESSION['nama'];
                 <ul
                     class="dropdown-menu dropdown-menu-end"
                     aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#!">Profile</a></li>
+                    <li><a class="dropdown-item" href="profile.php">Profile</a></li>
                     <li><a class="dropdown-item" href="#!">Activity Log</a></li>
                     <li>
                         <hr class="dropdown-divider" />
@@ -102,7 +99,7 @@ $nama = $_SESSION['nama'];
                 <div class="sb-sidenav-menu">
                     <div class="nav">
                         <div class="sb-sidenav-menu-heading">Home</div>
-                        <a class="nav-link" href="admin.php">
+                        <a class="nav-link" href="staf.php">
                             <div class="sb-nav-link-icon">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -121,7 +118,7 @@ $nama = $_SESSION['nama'];
 
                         <a
                             class="nav-link collapsed"
-                            href="#"
+                            href=""
                             data-bs-toggle="collapse"
                             data-bs-target="#collapseLayouts1"
                             aria-expanded="false"
@@ -145,6 +142,7 @@ $nama = $_SESSION['nama'];
                             <nav class="sb-sidenav-menu-nested nav">
                                 <a class="nav-link" href="kelolabarang.php">Data Barang</a>
                                 <a class="nav-link" href="kelolaruangan.php">Data Ruangan</a>
+                                <a class="nav-link" href="tambahan_kelola_data_user.php">Data User</a>
                             </nav>
                         </div>
 
@@ -162,7 +160,6 @@ $nama = $_SESSION['nama'];
                         <div class="sb-sidenav-menu-heading">KONFIRMASI</div>
                         <a class="nav-link" href="konfirmasiadmin.php">
                             <div class="sb-nav-link-icon">
-
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-square" viewBox="0 0 16 16">
                                     <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
                                     <path d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z" />
