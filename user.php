@@ -226,40 +226,49 @@ $nama = $_SESSION['nama'];
               <i class="fas fa-table me-1"></i>
               View Peminjaman Barang
             </div>
-
-            <table class="table">
-              <thead>
-                <tr>
-                  <th scope="col">No</th>
-                  <th scope="col">Nama Barang</th>
-                  <th scope="col">Tgl. pinjam</th>
-                  <th scope="col">Tgl. kembali</th>
-                  <th scope="col">Riwayat</th>
-                  <th scope="col">Status</th>
-                </tr>
-              </thead>
-            </table>
+            <div class="table-responsive">
+              <table class="table table-striped table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">Nama Barang</th>
+                    <th scope="col">Tgl. Pinjam</th>
+                    <th scope="col">Tgl. Kembali</th>
+                    <th scope="col">Riwayat</th>
+                    <th scope="col">Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Data akan dimasukkan di sini -->
+                </tbody>
+              </table>
+            </div>
           </div>
+
           <div class="card mb-4">
             <div class="card-header">
               <i class="fas fa-table me-1"></i>
               View Peminjaman Ruangan
             </div>
-
-            <table class="table">
-              <thead>
-                <tr>
-                  <th scope="col">No</th>
-                  <th scope="col">Nama Barang</th>
-                  <th scope="col">Tgl. pinjam</th>
-                  <th scope="col">Tgl. kembali</th>
-                  <th scope="col">Riwayat</th>
-                  <th scope="col">Status</th>
-                </tr>
-              </thead>
-            </table>
+            <div class="table-responsive">
+              <table class="table table-striped table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">Nama Ruangan</th>
+                    <th scope="col">Tgl. Pinjam</th>
+                    <th scope="col">Tgl. Kembali</th>
+                    <th scope="col">Riwayat</th>
+                    <th scope="col">Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Data akan dimasukkan di sini -->
+                </tbody>
+              </table>
+            </div>
           </div>
-        </div>
+
       </main>
 
       <footer class="py-4 bg-light mt-auto">
