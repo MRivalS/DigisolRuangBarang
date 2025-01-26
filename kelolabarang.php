@@ -72,7 +72,7 @@ $nama = $_SESSION['nama'];
 <body class="sb-nav-fixed">
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
         <!-- Navbar Brand-->
-        <a class="navbar-brand ps-3" href="admin.php">
+        <a class="navbar-brand ps-3" href="staf.php">
             <img
                 src="assets/img/HomeRB.png"
                 alt="Logo"
@@ -211,11 +211,11 @@ $nama = $_SESSION['nama'];
                             <input type="hidden" name="id" id="id">
                             <div class="mb-3" style="margin-bottom: 20px;">
                                 <label for="kode_barang" class="form-label">Kode Barang</label>
-                                <input type="text" name="nama_barang" class="form-control" id="nama_barang" placeholder="Masukan Nama Barang" required>
+                                <input type="text" name="nama_barang" class="form-control" id="nama_barang" placeholder="Masukan Kode Barang" required>
                             </div>
                             <div class="mb-3" style="margin-bottom: 20px;">
                                 <label for="nama_barang" class="form-label">Nama Barang</label>
-                                <input type="text" name="kode_barang" class="form-control" id="kode_barang" placeholder="Masukan Kode Barang" required>
+                                <input type="text" name="kode_barang" class="form-control" id="kode_barang" placeholder="Masukan Nama Barang" required>
                             </div>
                             <!-- Submit submit -->
                             <div style="margin-bottom: 30px;">
