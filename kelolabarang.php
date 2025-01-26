@@ -210,11 +210,11 @@ $nama = $_SESSION['nama'];
                             <!-- Masukan Data Barang -->
                             <input type="hidden" name="id" id="id">
                             <div class="mb-3" style="margin-bottom: 20px;">
-                                <label for="kode_barang" class="form-label">Nama Barang</label>
+                                <label for="kode_barang" class="form-label">Kode Barang</label>
                                 <input type="text" name="nama_barang" class="form-control" id="nama_barang" placeholder="Masukan Nama Barang" required>
                             </div>
                             <div class="mb-3" style="margin-bottom: 20px;">
-                                <label for="nama_barang" class="form-label">Kode Barang</label>
+                                <label for="nama_barang" class="form-label">Nama Brang</label>
                                 <input type="text" name="kode_barang" class="form-control" id="kode_barang" placeholder="Masukan Kode Barang" required>
                             </div>
                             <!-- Submit submit -->
@@ -228,9 +228,9 @@ $nama = $_SESSION['nama'];
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th>No</th>
-                                    <th>Nama Barang</th>
+
                                     <th>Kode Barang</th>
+                                    <th>Nama Barang</th>
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
@@ -238,7 +238,6 @@ $nama = $_SESSION['nama'];
                                 <?php
                                 if ($resultBarang->num_rows > 0) {
                                     while ($row = $resultBarang->fetch_assoc()) {
-                                        echo "<td>" . $row['id'] . "</td>";
                                         echo "<td>" . $row['kode_barang'] . "</td>";
                                         echo "<td>" . $row['nama_barang'] . "</td>";
                                         echo "<td>
