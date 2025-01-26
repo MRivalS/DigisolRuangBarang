@@ -22,7 +22,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             header('Location: dashboard.php');
         }
     } else {
-        header("locatio:formlogin.php");
+        echo "<script>
+        alert('Username atau password salah!');
+        window.location.href = 'formlogin.php';
+    </script>";
+        exit(); // Hentikan eksekusi setelah JavaScript
     }
 }
 ?>
@@ -37,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link rel="icon" href="./assets/img/LogoRB.png" />
     <link rel="stylesheet" href="./assets/img/LogoRB.png">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+
     <style>
         /* Reset dasar */
         body {
