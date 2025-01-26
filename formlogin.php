@@ -36,6 +36,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <title>Ruang Barang</title>
     <link rel="icon" href="./assets/img/LogoRB.png" />
     <link rel="stylesheet" href="./assets/img/LogoRB.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     <style>
         /* Reset dasar */
         body {
@@ -135,7 +137,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <body>
     <div class="login-container">
-        <div class="login-card">
+        <div class="login-card" class="table-responsive">
             <div class="logo">
                 <!-- Ganti logo.png dengan gambar logo Anda -->
                 <img src="./assets/img/LogoRB.png" alt="Logo">
