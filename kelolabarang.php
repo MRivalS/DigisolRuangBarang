@@ -214,7 +214,7 @@ $nama = $_SESSION['nama'];
                                 <input type="text" name="nama_barang" class="form-control" id="nama_barang" placeholder="Masukan Nama Barang" required>
                             </div>
                             <div class="mb-3" style="margin-bottom: 20px;">
-                                <label for="nama_barang" class="form-label">Nama Brang</label>
+                                <label for="nama_barang" class="form-label">Nama Barang</label>
                                 <input type="text" name="kode_barang" class="form-control" id="kode_barang" placeholder="Masukan Kode Barang" required>
                             </div>
                             <!-- Submit submit -->
